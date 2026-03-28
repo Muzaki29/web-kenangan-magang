@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Direktori Peserta Magang — Museum Penerangan</title>
+    <meta name="description" content="Daftar peserta magang Museum Penerangan per tahun." />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="site-logo" href="index.html">Museum Penerangan</a>
+        <nav class="site-nav" aria-label="Navigasi utama">
+          <a href="index.html">Beranda</a>
+          <a href="gallery.html">Galeri</a>
+          <a href="interns.html" aria-current="page">Direktori</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container">
+          <h1 class="section-title">Para peserta magang</h1>
+          <p class="section-sub">
+            Kenalan yuk — bisa disaring juga menurut tahun angkatan kalau mau fokus ke satu batch.
+          </p>
+
+          <div class="gallery-toolbar">
+            <div class="filter-group">
+              <label for="year-filter">Angkatan</label>
+              <select id="year-filter" aria-label="Filter tahun magang">
+                <option value="all">Semua</option>
+              </select>
+            </div>
+          </div>
+
+          <p id="interns-error" class="error-state" hidden></p>
+          <ul id="intern-grid" class="intern-grid" aria-label="Daftar peserta magang"></ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <p class="site-footer__title"><strong>Museum Penerangan</strong> — Arsip Kenangan Magang</p>
+        <p class="site-footer__meta">Situs statis · data dari berkas JSON</p>
+        <p id="footer-fun-fact" class="site-footer__fun-fact" hidden></p>
+      </div>
+    </footer>
+
+    <div class="music-dock" id="music-dock" role="region" aria-label="Pemutar musik kenangan">
+      <p class="music-dock__track">
+        <span class="music-dock__label">Lagu kenangan</span>
+        <span class="music-dock__title">Bernadya — Kita Buat Menyenangkan</span>
+      </p>
+      <p id="music-dock-error" class="music-dock__err" role="alert" hidden></p>
+      <button
+        type="button"
+        class="music-dock__btn"
+        id="music-dock-toggle"
+        aria-pressed="false"
+        aria-label="Putar lagu kenangan"
+      >
+        <span class="music-dock__btn-icon" aria-hidden="true">▶</span>
+        <span class="music-dock__btn-text">Putar</span>
+      </button>
+    </div>
+    <audio id="site-audio" preload="auto" playsinline>
+      <source src="audio/lagu-kenangan.mp3" type="audio/mpeg" />
+    </audio>
+
+    <script type="module" src="js/interns.js"></script>
+    <script type="module" src="js/fun-fact-footer.js"></script>
+    <script type="module" src="js/site-audio.js"></script>
+  </body>
+</html>

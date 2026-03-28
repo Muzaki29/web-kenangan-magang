@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arsip Kenangan Magang — Museum Penerangan</title>
+    <meta
+      name="description"
+      content="Album kecil kenangan magang Museum Penerangan: foto, kutipan, dan cerita ringan dari teman-teman magang."
+    />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="site-logo" href="index.html">Museum Penerangan</a>
+        <nav class="site-nav" aria-label="Navigasi utama">
+          <a href="index.html" aria-current="page">Beranda</a>
+          <a href="gallery.html">Galeri</a>
+          <a href="interns.html">Direktori</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero__scrapbook" aria-hidden="true">
+          <span class="hero__tape hero__tape--tl"></span>
+          <span class="hero__tape hero__tape--br"></span>
+          <span class="hero__paperclip"></span>
+        </div>
+        <div class="container">
+          <figure class="hero__building">
+            <img
+              src="images/muspen/gedung-muspen.png"
+              alt="Tampak luar gedung Museum Penerangan (Muspen) dengan papan nama depan dan langit biru."
+              width="1600"
+              height="900"
+              decoding="async"
+            />
+            <figcaption class="hero__building-caption">Gedung Museum Penerangan</figcaption>
+          </figure>
+          <p class="hero__eyebrow">Kenangan magang, versi digital</p>
+          <h1 class="hero__title">Hai, ini album kecil magang kami di Museum Penerangan</h1>
+          <p class="hero__lead">
+            Kami simpan foto-foto dan cerita pendek supaya momen belajar, ketawa bareng,
+            dan kerja sama tim tetap kebaca — kayak buku tahunan, cuma dalam bentuk situs yang (mudah-mudahan) hangat.
+          </p>
+          <div class="hero__mood-wrap">
+            <p class="hero__mood" id="hero-mood" aria-live="polite"></p>
+            <button type="button" class="hero__mood-refresh" id="hero-mood-btn">
+              Ganti kata hari ini
+            </button>
+          </div>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="gallery.html">Mampir ke galeri</a>
+            <a class="btn btn--ghost" href="interns.html">Lihat siapa saja magang di sini</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <h2 class="section-title">Sedikit tentang magang di sini</h2>
+          <p class="section-sub">
+            Di Museum Penerangan, magang itu kesempatan nyemplung ke dunia museum — dokumentasi,
+            komunikasi, dan hal-hal di balik layar — plus biasanya pulang bawa cerita dan teman baru.
+          </p>
+          <div class="intro-block">
+            <p>
+              Di situs ini kami kumpulkan foto dan kutipan singkat dari teman-teman magang,
+              buat staf, alumni, atau siapa pun yang penasaran sama suasana magang dari tahun ke tahun.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--tight">
+        <div class="container">
+          <h2 class="section-title">Cuplikan galeri bareng</h2>
+          <p class="section-sub">Enam foto diacak tiap kali halaman dimuat — klik untuk buka halaman galeri penuh.</p>
+          <ul id="teaser-grid" class="teaser-grid" aria-live="polite"></ul>
+          <p id="teaser-error" class="empty-state" hidden>Gagal memuat data. Coba buka lewat Laragon atau localhost (alamat http://), ya.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <p class="site-footer__title"><strong>Museum Penerangan</strong> — Arsip Kenangan Magang</p>
+        <p class="site-footer__meta">Halaman sederhana · isi orang dan fotonya dari berkas JSON</p>
+        <p id="footer-fun-fact" class="site-footer__fun-fact" hidden></p>
+      </div>
+    </footer>
+
+    <div class="music-dock" id="music-dock" role="region" aria-label="Pemutar musik kenangan">
+      <p class="music-dock__track">
+        <span class="music-dock__label">Lagu kenangan</span>
+        <span class="music-dock__title">Bernadya — Kita Buat Menyenangkan</span>
+      </p>
+      <p id="music-dock-error" class="music-dock__err" role="alert" hidden></p>
+      <button
+        type="button"
+        class="music-dock__btn"
+        id="music-dock-toggle"
+        aria-pressed="false"
+        aria-label="Putar lagu kenangan"
+      >
+        <span class="music-dock__btn-icon" aria-hidden="true">▶</span>
+        <span class="music-dock__btn-text">Putar</span>
+      </button>
+    </div>
+    <audio id="site-audio" preload="auto" playsinline>
+      <source src="audio/lagu-kenangan.mp3" type="audio/mpeg" />
+    </audio>
+
+    <script type="module" src="js/index.js"></script>
+    <script type="module" src="js/fun-fact-footer.js"></script>
+    <script type="module" src="js/site-audio.js"></script>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+[
+  {
+    "id": "alycia",
+    "name": "Alycia",
+    "nickname": "Si Kurator Muda",
+    "division": "Kuratorial & Edukasi",
+    "year": 2025,
+    "quote": "Tiap hari rasanya nambah satu halaman buku kenangan — yang isinya tugas, tawa, dan koleksi.",
+    "funFact": "Pernah iseng ngitung langkah dari lift ke galeri, ujung-ujungnya kepikiran ngopi.",
+    "photo": "images/tim/profile-default.svg",
+    "gallery": []
+  },
+  {
+    "id": "della",
+    "name": "Della",
+    "nickname": "Juru Cerita Publik",
+    "division": "Komunikasi Publik",
+    "year": 2025,
+    "quote": "Belajar narasikan koleksi lewat cerita kecil — dan senyum orang yang lewat.",
+    "funFact": "Caption IG kadang keburu jadi dulu sebelum mikir alas kaki buat tur lapangan.",
+    "photo": "images/tim/profile-default.svg",
+    "gallery": []
+  },
+  {
+    "id": "via",
+    "name": "Via",
+    "nickname": "Penjaga Lemari Rahasia",
+    "division": "Dokumentasi & Arsip",
+    "year": 2025,
+    "quote": "Arsip itu nggak harus dingin — di balik lembar-lembarnya ada cerita yang nyantol di ingatan.",
+    "funFact": "Folder di laptop rapi; meja magang tetap hidup (berantakan dengan sistem, katanya).",
+    "photo": "images/tim/profile-default.svg",
+    "gallery": []
+  },
+  {
+    "id": "cherin",
+    "name": "Cherin",
+    "nickname": "Tukang Tata Cahaya",
+    "division": "Pameran & Desain",
+    "year": 2025,
+    "quote": "Ruang pamer itu kayak panggung kecil: sederhana, tapi bisa muat ide besar.",
+    "funFact": "Lihat mood board pameran sering bikin pengen ubah warna cat di rumah.",
+    "photo": "images/tim/profile-default.svg",
+    "gallery": []
+  },
+  {
+    "id": "muzaki",
+    "name": "Muzaki",
+    "nickname": "Debuger Museum",
+    "division": "Teknologi Informasi",
+    "year": 2025,
+    "quote": "Kode sama koleksi ternyata sama-sama usaha supaya cerita nggak ilang begitu aja.",
+    "funFact": "Commit message pernah lebih panjang dari caption kenangan di grup WA magang.",
+    "photo": "images/tim/profile-default.svg",
+    "gallery": []
+  }
+]

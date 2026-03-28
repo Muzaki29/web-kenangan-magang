@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galeri Kenangan — Museum Penerangan</title>
+    <meta name="description" content="Galeri foto kenangan magang Museum Penerangan." />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="site-logo" href="index.html">Museum Penerangan</a>
+        <nav class="site-nav" aria-label="Navigasi utama">
+          <a href="index.html">Beranda</a>
+          <a href="gallery.html" aria-current="page">Galeri</a>
+          <a href="interns.html">Direktori</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container">
+          <h1 class="section-title">Galeri kenangan bareng</h1>
+          <p class="section-sub">
+            Foto-foto tim magang dijajar sedikit acak biar kerasa kayak meja penuh cetakan photobooth — klik untuk besar,
+            atau jajal Kenangan acak.
+          </p>
+
+          <div class="gallery-toolbar">
+            <button type="button" class="btn btn--primary" id="btn-random">
+              Kenangan acak
+            </button>
+          </div>
+
+          <p id="gallery-error" class="error-state" hidden></p>
+          <div class="scatter-stage">
+            <ul id="photo-grid" class="photo-grid photo-grid--scatter" aria-label="Galeri foto kelompok"></ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <p class="site-footer__title"><strong>Museum Penerangan</strong> — Arsip Kenangan Magang</p>
+        <p class="site-footer__meta">Situs statis · data dari berkas JSON</p>
+        <p id="footer-fun-fact" class="site-footer__fun-fact" hidden></p>
+      </div>
+    </footer>
+
+    <div
+      id="photo-modal"
+      class="modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-caption"
+      hidden
+    >
+      <div class="modal__dialog">
+        <button type="button" class="modal__close" aria-label="Tutup">&times;</button>
+        <div class="modal__img-wrap">
+          <img id="modal-image" src="" alt="" />
+        </div>
+        <p id="modal-caption" class="modal__caption"></p>
+      </div>
+    </div>
+
+    <div class="music-dock" id="music-dock" role="region" aria-label="Pemutar musik kenangan">
+      <p class="music-dock__track">
+        <span class="music-dock__label">Lagu kenangan</span>
+        <span class="music-dock__title">Bernadya — Kita Buat Menyenangkan</span>
+      </p>
+      <p id="music-dock-error" class="music-dock__err" role="alert" hidden></p>
+      <button
+        type="button"
+        class="music-dock__btn"
+        id="music-dock-toggle"
+        aria-pressed="false"
+        aria-label="Putar lagu kenangan"
+      >
+        <span class="music-dock__btn-icon" aria-hidden="true">▶</span>
+        <span class="music-dock__btn-text">Putar</span>
+      </button>
+    </div>
+    <audio id="site-audio" preload="auto" playsinline>
+      <source src="audio/lagu-kenangan.mp3" type="audio/mpeg" />
+    </audio>
+
+    <script type="module" src="js/gallery.js"></script>
+    <script type="module" src="js/fun-fact-footer.js"></script>
+    <script type="module" src="js/site-audio.js"></script>
+  </body>
+</html>
