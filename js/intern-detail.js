@@ -14,9 +14,6 @@ const detailYear = document.querySelector("#detail-year");
 const detailQuote = document.querySelector("#detail-quote");
 const galleryGrid = document.querySelector("#detail-gallery-grid");
 const detailGallerySection = document.querySelector("#detail-gallery");
-const detailPlayful = document.querySelector("#detail-playful");
-const detailNickname = document.querySelector("#detail-nickname");
-const detailFunfact = document.querySelector("#detail-funfact");
 
 function showError(message) {
   if (errorEl) {
@@ -63,16 +60,6 @@ async function init() {
   if (detailDivision) detailDivision.textContent = intern.division;
   if (detailYear) detailYear.textContent = `Tahun ${intern.year}`;
   if (detailQuote) detailQuote.textContent = intern.quote;
-
-  const nick = typeof intern.nickname === "string" ? intern.nickname.trim() : "";
-  const fact = typeof intern.funFact === "string" ? intern.funFact.trim() : "";
-  if (detailPlayful && detailNickname && detailFunfact) {
-    detailNickname.textContent = nick ? `“${nick}”` : "";
-    detailNickname.hidden = !nick;
-    detailFunfact.textContent = fact;
-    detailFunfact.hidden = !fact;
-    detailPlayful.hidden = !nick && !fact;
-  }
 
   const modalApi = initModal("#photo-modal");
   const imgs = [...(intern.gallery || [])];

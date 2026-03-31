@@ -27,23 +27,13 @@ function renderCards(interns, year) {
     const a = document.createElement("a");
     a.className = "intern-card";
     a.href = `intern.html?id=${encodeURIComponent(p.id)}`;
-    const nick =
-      typeof p.nickname === "string" && p.nickname.trim()
-        ? `<p class="intern-card__nick">${escapeHtml(p.nickname.trim())}</p>`
-        : "";
-    const fun =
-      typeof p.funFact === "string" && p.funFact.trim()
-        ? `<p class="intern-card__fun">${escapeHtml(p.funFact.trim())}</p>`
-        : "";
     a.innerHTML = `
       <div class="intern-card__photo">
         <img src="${escapeAttr(p.photo)}" alt="" width="400" height="300" loading="lazy" />
       </div>
       <div class="intern-card__body">
         <h2 class="intern-card__name">${escapeHtml(p.name)}</h2>
-        ${nick}
         <p class="intern-card__meta">${escapeHtml(p.division)}</p>
-        ${fun}
         <span class="intern-card__year">Angkatan ${escapeHtml(String(p.year))}</span>
       </div>
     `;
